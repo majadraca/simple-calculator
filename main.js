@@ -1,6 +1,7 @@
 const display = document.querySelector(".input");
 const calcButtons = document.querySelectorAll("button");
 const result = document.querySelector(".result");
+var equalPressed = false;
 
 
 calcButtons.forEach(function(button) {
@@ -10,7 +11,12 @@ calcButtons.forEach(function(button) {
 function calculate (event) {
   const clickedButtonValue = event.target.value;
   
+    if(equalPressed && (clickedButtonValue === "+" || clickedButtonValue === "-" || clickedButtonValue === "*" || clickedButtonValue === "/")){
+      display.value = result.value;
+      equalPressed = false;
+    }
     if (clickedButtonValue === "=") {
+      equalPressed = true;
       if(display.value !== "") {
         result.value = eval(display.value);
       }
