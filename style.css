@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+
+.calculator {
+    width:60%;
+    margin: 50px auto;
+}
+
+.calculate {
+    height: 40vh;
+    width: 100%;
+    border-bottom: 2px solid #a6a9b6;
+}
+
+.result, .input {
+    margin: 20px auto;
+    height: 40%;
+    width: 90%;
+    border: none;
+    outline: none;
+    font-size: 4rem;
+    background-color:white;
+    text-align: right;
+    padding-left: 20px;
+}
+
+.input{
+    font-size: 3rem !important;
+}
+
+.options {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    height: 50vh;
+}
+
+.numbers {
+    padding: 20px 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 15px;
+}
+
+.numbers button,
+.symbols button {
+    border: 1px solid #f5f4f4;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f4f4;
+    outline: none;
+}
+
+.numbers button:hover,
+.symbols button:hover {
+    cursor: pointer;
+}
+
+button {
+    font-size: 2.5rem;
+    color: #495464;
+}
+
+.all-clear {
+    background-color: #FF5252 !important;
+    color: #fff;
+}
+
+.symbols {
+    padding: 20px 10px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 15px;
+}
+
+.equal-sign {
+    background-color: #a6a9b6 !important;
+    color: white;
+}
+
+@media (max-width: 1100px) {
+    .calculator {
+        width:80%;
+    }
+    .result {
+        font-size: 3rem !important;
+    }
+    .input {
+        font-size: 2.5rem !important;
+    }
+}
+
+@media (max-width: 550px) {
+    .calculator {
+        width: 90%;
+    }
+    .result {
+        font-size: 2rem !important;
+        height: 35%;
+    }
+    .input {
+        font-size: 1.5rem !important;
+        height: 35%;
+    }
+    button {
+        font-size: 1.5rem;
+    }
+    .numbers,
+    .symbols {
+        grid-gap: 10px;
+    }
+}
+
+@media (max-width: 340px) {
+    .result {
+        font-size: 1.5rem !important;
+    }
+    .input {
+        font-size: 1rem !important;
+    }
+    button {
+        font-size: 1rem;
+    }
+}
+
