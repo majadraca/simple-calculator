@@ -10,11 +10,10 @@ calcButtons.forEach(function(button) {
 function calculate (event) {
   const clickedButtonValue = event.target.value;
   
-  if (clickedButtonValue === "=") {
+    if (clickedButtonValue === "=") {
       if(display.value !== "") {
-        display.value = eval(display.value);
         result.value = eval(display.value);
-      } 
+      }
     } else if (clickedButtonValue === "AC"){
         display.value = "";
         result.value = "";
@@ -27,6 +26,10 @@ function calculate (event) {
             return;
         } display.value += clickedButtonValue;
         result.value = "";
-    }
+    } 
 }
+
+
+
+
 
